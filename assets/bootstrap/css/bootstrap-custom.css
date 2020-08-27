@@ -1,0 +1,155 @@
+body{
+    font-family: Century Gothic;
+    font-size: medium;
+}
+
+.form{
+    border-radius: 20px;
+}
+
+#tulisan_navbar:hover{
+    background-color: #ecfd00c2;
+    -webkit-animation: color 10s ease-in  10s infinite alternate running;
+	-moz-animation: color 10s linear  10s infinite alternate running;
+	animation: color 5s linear  0s infinite alternate running;
+    border-radius: 20px;
+}
+
+@-webkit-keyframes color {
+    0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+@-moz-keyframes color {
+     0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+@keyframes color {
+  0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+
+#all{
+    margin-top: 70px;
+}
+
+.card-header div{
+    font-size: 20px;
+}
+
+thead{
+    background-color: #eae9e9;
+}
+
+tfoot{
+    background-color: #eae9e9;
+}
+
+.nomor{
+    text-align: center; 
+    width: 50px; 
+}
+
+.tambah{
+    margin-bottom: 10px;
+}
+
+.jumlah{
+    margin-bottom: 10px;
+}
+
+.tanggal{
+    text-align: center;
+    width: 130px;
+}
+
+.perusahaan{
+    text-align: left;
+    width: 300px;
+}
+
+.perusahaan1{
+    text-align: left;
+    width: 400px;
+}
+
+.psikotes{
+    text-align: center;
+    width: 130px;
+}
+
+.interview{
+    text-align: center;
+}
+
+.hrd{
+    text-align: center;
+    width: 130px;
+}
+
+.user{
+    text-align: center;
+    width: 130px;
+}
+
+.owner{
+    text-align: center;
+    width: 130px;
+}
+
+.status{
+    text-align: center;
+    width: 120px;
+}
+
+.aksi{
+    text-align: center;
+}
+
+.detail_proses{
+    width: 250px;
+}
+
+.sama_dengan{
+    width: 20px;
+    text-align: center;
+}
+
+.backTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-block;  
+    margin: 5px 5px 16px 0;
+    
+    
+}
+
+.back{
+    width: 40px;
+    height: 40px;
+    background-color:#343a40;
+    color: white;
+    border-radius: 3px;
+}
+
+#back{
+    margin: 13px 0 0 14px;
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+.modal-body{
+    max-height: calc(100vh - 210px); 
+    overflow-y: auto;
+}
