@@ -6,6 +6,7 @@
     <div class="card shadow mb-4">
         <div class="card-header">
             <button class="btn btn-dark" data-toggle="modal" data-target="#tambah_proses">Tambah Data</button>
+            <span class="ml-1" id="total">Total Lamaran : </span>
         </div>
         <div class="card-body">
             <div class="mb-4 mt-2">
