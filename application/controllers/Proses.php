@@ -12,11 +12,71 @@ class Proses extends CI_Controller
 	public function index()
 	{
 		$data['tampil'] = $this->Proses_Model->tampil();
-        $data['total_lamaran'] = $this->Proses_Model->total_lamaran();
+        $data['total_semua_lamaran'] = $this->Proses_Model->total_semua_lamaran();
+        $data['total_semua_diterima'] = $this->Proses_Model->total_semua_diterima();
+        $data['total_semua_menunggu'] = $this->Proses_Model->total_semua_menunggu();
+        $data['total_lamaran_ditolak'] = $this->Proses_Model->total_lamaran_ditolak();
+        $data['total_lamaran_tidak_ada_respon'] = $this->Proses_Model->total_lamaran_tidak_ada_respon();
 		$this->load->view('layouts/header');
 		$this->load->view('proses', $data);
 		$this->load->view('layouts/footer');
 
+	}
+
+	public function diterima()
+	{
+		$data['tampil'] = $this->Proses_Model->tampil();
+		$data['tampil_diterima'] = $this->Proses_Model->tampil_diterima();
+        $data['total_semua_lamaran'] = $this->Proses_Model->total_semua_lamaran();
+        $data['total_semua_diterima'] = $this->Proses_Model->total_semua_diterima();
+        $data['total_semua_menunggu'] = $this->Proses_Model->total_semua_menunggu();
+        $data['total_lamaran_ditolak'] = $this->Proses_Model->total_lamaran_ditolak();
+        $data['total_lamaran_tidak_ada_respon'] = $this->Proses_Model->total_lamaran_tidak_ada_respon();
+		$this->load->view('layouts/header');
+		$this->load->view('status/diterima', $data);
+		$this->load->view('layouts/footer');
+	}
+
+	public function menunggu()
+	{
+		$data['tampil'] = $this->Proses_Model->tampil();
+		$data['tampil_menunggu'] = $this->Proses_Model->tampil_menunggu();
+        $data['total_semua_lamaran'] = $this->Proses_Model->total_semua_lamaran();
+        $data['total_semua_diterima'] = $this->Proses_Model->total_semua_diterima();
+        $data['total_semua_menunggu'] = $this->Proses_Model->total_semua_menunggu();
+        $data['total_lamaran_ditolak'] = $this->Proses_Model->total_lamaran_ditolak();
+        $data['total_lamaran_tidak_ada_respon'] = $this->Proses_Model->total_lamaran_tidak_ada_respon();
+		$this->load->view('layouts/header');
+		$this->load->view('status/menunggu', $data);
+		$this->load->view('layouts/footer');
+	}
+
+	public function ditolak()
+	{
+		$data['tampil'] = $this->Proses_Model->tampil();
+		$data['tampil_ditolak'] = $this->Proses_Model->tampil_ditolak();
+        $data['total_semua_lamaran'] = $this->Proses_Model->total_semua_lamaran();
+        $data['total_semua_diterima'] = $this->Proses_Model->total_semua_diterima();
+        $data['total_semua_menunggu'] = $this->Proses_Model->total_semua_menunggu();
+        $data['total_lamaran_ditolak'] = $this->Proses_Model->total_lamaran_ditolak();
+        $data['total_lamaran_tidak_ada_respon'] = $this->Proses_Model->total_lamaran_tidak_ada_respon();
+		$this->load->view('layouts/header');
+		$this->load->view('status/ditolak', $data);
+		$this->load->view('layouts/footer');
+	}
+
+	public function tidak_ada_respon()
+	{
+		$data['tampil'] = $this->Proses_Model->tampil();
+		$data['tampil_tidak_ada_respon'] = $this->Proses_Model->tampil_tidak_ada_respon();
+        $data['total_semua_lamaran'] = $this->Proses_Model->total_semua_lamaran();
+        $data['total_semua_diterima'] = $this->Proses_Model->total_semua_diterima();
+        $data['total_semua_menunggu'] = $this->Proses_Model->total_semua_menunggu();
+        $data['total_lamaran_ditolak'] = $this->Proses_Model->total_lamaran_ditolak();
+        $data['total_lamaran_tidak_ada_respon'] = $this->Proses_Model->total_lamaran_tidak_ada_respon();
+		$this->load->view('layouts/header');
+		$this->load->view('status/tidak_ada_respon', $data);
+		$this->load->view('layouts/footer');
 	}
 
 	public function tambah()

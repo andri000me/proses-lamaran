@@ -9,8 +9,52 @@ class Proses_Model extends CI_Model
         return $query->result();
     }
 
-    function total_lamaran(){
-        $query = $this->db->query(" SELECT COUNT(id_data_proses) as total FROM data_proses");
+    public function tampil_diterima()
+    {
+        $query = $this->db->query("SELECT * FROM data_proses WHERE status_kepastian='Diterima'");
+        return $query->result();
+    }
+
+    public function tampil_menunggu()
+    {
+        $query = $this->db->query("SELECT * FROM data_proses WHERE status_kepastian='Menunggu'");
+        return $query->result();
+    }
+
+    public function tampil_ditolak()
+    {
+        $query = $this->db->query("SELECT * FROM data_proses WHERE status_kepastian='Ditolak'");
+        return $query->result();
+    }
+
+    public function tampil_tidak_ada_respon()
+    {
+        $query = $this->db->query("SELECT * FROM data_proses WHERE status_kepastian='Tidak Ada Respon'");
+        return $query->result();
+    }
+
+    public function total_semua_lamaran(){
+        $query = $this->db->query("SELECT COUNT(id_data_proses) as total FROM data_proses");
+        return $query->row_array();
+    }
+
+    public function total_semua_diterima(){
+        $query = $this->db->query("SELECT COUNT(id_data_proses) as total FROM data_proses WHERE status_kepastian='Diterima'");
+        return $query->row_array();
+    }
+
+    public function total_semua_menunggu(){
+        $query = $this->db->query("SELECT COUNT(id_data_proses) as total FROM data_proses WHERE status_kepastian='Menunggu'");
+        return $query->row_array();
+    }
+
+    public function total_lamaran_ditolak(){
+        $query = $this->db->query("SELECT COUNT(id_data_proses) as total FROM data_proses WHERE status_kepastian='Ditolak'");
+        return $query->row_array();
+    }
+
+    public function total_lamaran_tidak_ada_respon(){
+        $query = $this->db->query("SELECT COUNT(id_data_proses) as total FROM data_proses WHERE status_kepastian='Tidak Ada Respon'");
         return $query->row_array();
     }
 

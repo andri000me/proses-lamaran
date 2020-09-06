@@ -3,10 +3,6 @@ body{
     font-size: medium;
 }
 
-.form{
-    border-radius: 20px;
-}
-
 #tulisan_navbar:hover{
     background-color: #ecfd00c2;
     -webkit-animation: color 10s ease-in  10s infinite alternate running;
@@ -41,8 +37,8 @@ body{
     margin-top: 70px;
 }
 
-.card-header div{
-    font-size: 20px;
+.card-header{
+    background-color: #ffffff important!;
 }
 
 thead{
@@ -53,37 +49,28 @@ tfoot{
     background-color: #eae9e9;
 }
 
-.nomor{
-    text-align: center; 
-    width: 50px; 
-}
-
-.tambah{
-    margin-bottom: 10px;
-}
-
 .jumlah{
     margin-bottom: 10px;
 }
 
+.nomor{
+    text-align: center;
+    width: 20px;
+}
+
 .tanggal{
     text-align: center;
-    width: 130px;
+    width: 110px;
 }
 
 .perusahaan{
     text-align: left;
-    width: 300px;
-}
-
-.perusahaan1{
-    text-align: left;
-    width: 400px;
+    width: 320px;
 }
 
 .psikotes{
     text-align: center;
-    width: 130px;
+    width: 110px;
 }
 
 .interview{
@@ -92,22 +79,22 @@ tfoot{
 
 .hrd{
     text-align: center;
-    width: 130px;
+    width: 110px;
 }
 
 .user{
     text-align: center;
-    width: 130px;
+    width: 110px;
 }
 
 .owner{
     text-align: center;
-    width: 130px;
+    width: 110px;
 }
 
 .status{
     text-align: center;
-    width: 120px;
+    width: 170px;
 }
 
 .aksi{

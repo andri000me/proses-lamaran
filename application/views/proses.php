@@ -5,16 +5,27 @@
 <div class="container-fluid mt-3" >
     <div class="card shadow mb-4">
         <div class="card-header">
-            <div>
-                <span>Data Proses Lamaran</span>
-            </div>
+            <button class="btn btn-dark" data-toggle="modal" data-target="#tambah_proses">Tambah Data</button>
         </div>
-        <div class="card-body"> 
-            <div class="tambah">
-                <button class="btn btn-dark" data-toggle="modal" data-target="#tambah_proses">Tambah Proses</button>
-            </div>
-            <div class="jumlah">
-                <span>Jumlah : <b><?= $total_lamaran['total'] ;?></b> Lamaran</span>
+        <div class="card-body">
+            <div class="mb-4 mt-2">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?= base_url('proses'); ?>">Semua Lamaran</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('proses/diterima'); ?>">Lamaran Diterima</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('proses/ditolak'); ?>">Lamaran Ditolak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('proses/menunggu'); ?>">Lamaran Menunggu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('proses/tidak_ada_respon'); ?>">Lamaran Tidak Ada Respon</a>
+                    </li>
+                </ul>
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered table-hover" id="datatable">
@@ -36,21 +47,20 @@
                     </thead>
 
                     <?php 
-                        $n=0; 
+                        $no = 0;
                         foreach ($tampil as $row) { 
-                        $n++; 
+                        $no++;
                     ?>
-
                     <tbody>
                         <tr>
-                            <td><?= $n ?></td>
-                            <td><?= $row->tanggal; ?></td>
+                            <td class="nomor"><?= $no ?></th>
+                            <td class="tanggal"><?= $row->tanggal; ?></td>
                             <td><?= $row->nama_perusahaan; ?></td>
-                            <td><?= $row->psikotes; ?></td>
-                            <td><?= $row->interview_hrd; ?></td>
-                            <td><?= $row->interview_user; ?></td>
-                            <td><?= $row->interview_owner; ?></td>
-                            <td><?= $row->status_kepastian; ?></td>
+                            <td class="psikotes"><?= $row->psikotes; ?></td>
+                            <td class="hrd"><?= $row->interview_hrd; ?></td>
+                            <td class="interview"><?= $row->interview_user; ?></td>
+                            <td class="owner"><?= $row->interview_owner; ?></td>
+                            <td class="status"><?= $row->status_kepastian; ?></td>
                             <td class="aksi">
                                 <a href="#!" class="btn btn-info btn-sm" data-toggle="modal" data-target="#detail_proses<?php echo $row->id_data_proses; ?>">
                                     <i class="fas fa-th-list"></i>
@@ -323,5 +333,3 @@
     </div>
 </div>
 <?php } ?>
-
-
